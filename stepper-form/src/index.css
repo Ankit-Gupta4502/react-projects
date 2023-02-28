@@ -1,0 +1,61 @@
+.form-container {
+    background-color: #ebe7e7;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.form-container>.form-wrapper {
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.form-wrapper .stepper-item {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 30;
+
+}
+
+.form-wrapper .stepper{
+    max-width: 70%;
+    margin-inline: auto;
+}
+
+
+
+.form-wrapper .stepper::before {
+    content: "";
+    position: absolute;
+    width: 75%;
+    z-index: 1;
+    margin-inline: auto;
+    height: 1px;
+    background-color: #ebe7e7;
+    left: 51%;
+    transform: translateX(-50%);
+    top: 15px;
+}
+
+.form-wrapper .stepper .stepper-content{
+    display: flex;
+    flex-direction: column;
+align-items: center;
+}
+.form-wrapper .stepper .stepper-content>.centered-item{
+    box-shadow: 10px 6px 0 #fff,-10px -6px 0 #fff;
+}
+
+
+@media (max-width: 767px) {
+    .form-wrapper .stepper::before {
+        display: none;
+
+    }
+
+    .form-wrapper .stepper .stepper-content>.centered-item{
+        box-shadow: none;
+    }
+}
